@@ -198,4 +198,17 @@ return [
 
     'same_site' => 'lax',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Session Serialization
+    |--------------------------------------------------------------------------
+    |
+    | Laravel 13 introduces a "json" serialization option to help prevent PHP
+    | deserialization gadget chain attacks. Keeping this as "php" preserves
+    | existing active sessions created on previous Laravel versions.
+    |
+    */
+
+    'serialization' => env('SESSION_SERIALIZATION', 'php'),
+
 ];
